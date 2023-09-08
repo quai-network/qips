@@ -20,6 +20,13 @@ Those proposing changes should consider that ultimately consent may rest with th
 | wizeguyy
 | Process
 | Active
+|-
+| [[qip-0002.mediawiki|2]]
+| Consensus (hard fork)
+| Sharded ledger
+| wizeguyy
+| Standard
+| Draft
 |}
 
 <!-- IMPORTANT!  See the instructions at the top of this page, do NOT JUST add QIPs here! -->
