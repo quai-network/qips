@@ -1,0 +1,102 @@
+<pre>
+  QIP: 3
+  Layer: Applications
+  Title: Shard Specific Address Discovery
+  Author: wizeguyy <wizeguyy+qip@quai.org>
+  Comments-Summary: No comments yet.
+  Comments-URI: https://github.com/quainetwork/qips/wiki/Comments:QIP-0003
+  Status: Draft
+  Type: Standards Track
+  Created: 2023-09-12
+  License: BSD-2-Clause
+</pre>
+
+==Abstract==
+
+This QIP defines an address discovery algorithm for deterministic [https://github.com/bitcoin/bips/blob/master/bip-0044.mediawiki BIP44] wallets, which is compatible with Quai's <a href="qip-0002.mediawiki">QIP2</a> sharded address space.
+
+==Motivation==
+
+The hierarchy proposed in BIP44 is well defined, but the gap limit technique for address discovery is insufficient for wallets operating in Quai's sharded address space, described in <a href="qip-0002.mediawiki">QIP2</a>. This specification discribes an algorithm to discover addresses mapped to each shard, within the BIP44 hierarchy.
+
+==Specification==
+
+===Relationship to BIP44===
+
+BIP44 defines the following 5 levels in the BIP32 path:
+<pre>
+m / purpose' / coin_type' / account' / change / address_index
+</pre>
+
+Additionally BIP44 describes an account discovery and address gap limit techniques to standardize how wallet software can identify keys for use on a given blockchain. This QIP adheres to BIP44 in all ways except for the gap limit technique. Since each address is valid in one and only one chain, and that validity cannot be known by path alone (validity is determined by address prefix), the wallet must grind addresses until it finds addresses which are valid in each shard. In place of BIP44's gap limit, we define the shard discovery technique below.
+
+===Shard Address Discovery===
+
+To perform address discovery, a wallet software should search through the BIP44 <code>address_index</code> level of the BIP32 path and record which shard each address belongs to. This creates a secondary mapping on the <code>address_index</code>, which we denote <code>shard_address_index</code>. Precisely, the i<sup>th</sup> <code>shard_address_index</code> in <code>shard-k</code> is the i<sup>th</sup> address from the subset of addresses which are valid in <code>shard-k</code>.
+
+We give the following search algorithm in pseudo code for reference:
+<pre>
+// A BIP32 type to represent a full BIP32 path for address derivation
+struct bip32 {
+  uint64 purpose;
+  uint64 coin_type;
+  uint64 account;
+  uint64 change;
+  uint64 address_index;
+}
+
+// An address type
+struct address {
+  uint8[ADDR_LEN] bytes;
+}
+
+// Derive an address from a BIP32 path
+address addressFromBip32(path bip32) {
+  ...
+}
+
+// Determine the length of the shortest list in the 2D array of addresses.
+int lenOfShortestList(address_lists vector<vector<address>>) {
+  shard_address_index = 256; // QIP2 defined maximum number of shards
+  for shard_addresses in addresses {
+    shard_address_index = min(shard_address_index, shard_addresses.size())
+  }
+  return shard_address_index;
+}
+
+// Find the first 'n' addresses in each shard, starting at the given BIP32
+// path, and return a collection of addresses for each shard.
+vec<vec<addresses>> generateShardAddresses(n int, path bip32) {
+  // 2D vector of addresses. First dimension is shard number 'k', second axis
+  // is shard_address_index 'i'.
+  vec<vec<address>> address_lists {{0}};
+
+  // Loop until we find `n` addresses in each shard. Some shards may find many
+  // more than `n` addresses before each shard has found its `n`th.
+  while lenOfShortestList(address_lists) < n {
+    path.address_index++;
+    new_address = addressFromBip32(path)
+    shard = new_address.bytes[0]; // QIP2 specifies first byte as shard ID
+    address_lists[shard].push(new_address);
+  }
+
+  // Return the full list of addresses we've discovered
+  return addresses
+}
+</pre>
+
+===Gap Limit===
+
+For an account ledger there is no need to search for additional addresses beyond the first 256 (QIP2 defined maximum number of shards). For a UTXO ledger, we follow BIP44's gap limit definition applied to each shard, instead of applied to the raw <code>address_index</code>.
+
+====Examples====
+
+TBD...
+
+==Copyright==
+
+This QIP licensed under the BSD 2-clause license.
+
+==References==
+* https://github.com/bitcoin/bips/blob/master/bip-0032.mediawiki
+* https://github.com/bitcoin/bips/blob/master/bip-0044.mediawiki
