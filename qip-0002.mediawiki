@@ -2,7 +2,7 @@
   QIP: 2
   Layer: Consensus (hard fork)
   Title: Sharded ledger
-  Author: wizeguyy <wizeguyy+qip@qu.ai>
+  Author: wizeguyy <wizeguyy+qip@quai.org>
   Comments-Summary: No comments yet.
   Comments-URI: https://github.com/quainetwork/qips/wiki/Comments:QIP-0002
   Status: Draft

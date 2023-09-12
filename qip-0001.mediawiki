@@ -64,7 +64,7 @@ If you are interested in assuming ownership of a QIP, send a message asking to t
 
 The current QIP editors are:
 
-* wizeguyy ([[mailto:wizeguyy+qip@quai.org]])
+* wizeguyy ([[mailto:wizeguyy+qip@quai.org|wizeguyy+qip@quai.org]])
 
 ===QIP Editor Responsibilities & Workflow===
 
