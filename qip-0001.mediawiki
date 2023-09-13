@@ -19,7 +19,7 @@ We intend QIPs to be the primary mechanisms for proposing new features, for coll
 
 Because the QIPs are maintained as text files in a versioned repository, their revision history is the historical record of the feature proposal.
 
-This particular QIP is derived heavily from Bitcoin's [BIP-0002 https://github.com/bitcoin/bips/blob/master/bip-0002.mediawiki]
+This particular QIP is derived heavily from Bitcoin's [https://github.com/bitcoin/bips/blob/master/bip-0002.mediawiki BIP2]
 
 ==Copyright==
 
