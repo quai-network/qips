@@ -89,6 +89,10 @@ vec<vec<addresses>> generateShardAddresses(n int, path bip32) {
 
 For an account ledger there is no need to search for additional addresses beyond the first 256 (QIP2 defined maximum number of shards). For a UTXO ledger, we follow BIP44's gap limit definition applied to each shard, instead of applied to the raw <code>address_index</code>.
 
+Precisely, BIP44 has defined a gap limit of 20. In keeping with that, a UTXO wallet in the Quai network should keep searching for addresses until a gap of 20 unused addresses is found '''in each shard'''. It can be assumed that there are no used addresses in a shard beyond the 20<sup>th</sup> unused address in that shard.
+
+Software should warn when the user is trying to exceed the gap limit on any given shard chain, by generating a new address.
+
 ====Examples====
 
 TBD...
