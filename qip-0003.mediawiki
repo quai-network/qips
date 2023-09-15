@@ -81,7 +81,7 @@ vec<vec<addresses>> generateShardAddresses(n int, path bip32) {
   }
 
   // Return the full list of addresses we've discovered
-  return addresses
+  return address_lists;
 }
 </pre>
 
