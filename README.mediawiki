@@ -34,6 +34,13 @@ Those proposing changes should consider that ultimately consent may rest with th
 | wizeguyy
 | Standard
 | Draft
+|-
+| [[qip-0004.mediawiki|4]]
+| Applications
+| 9 Shard Address Mapping
+| wizeguyy
+| Standard
+| Draft
 |}
 
 <!-- IMPORTANT!  See the instructions at the top of this page, do NOT JUST add QIPs here! -->
