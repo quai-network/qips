@@ -61,13 +61,13 @@ The following table gives a few example shard identifiers, and which zone chain 
 |-
 | shard-1
 | 0x01
-| region-1
+| region-0
 | zone-0-1
 |-
 | shard-10
 | 0x0A
 | region-0
-| zone-0-A
+| zone-0-10
 |-
 | shard-42
 | 0x2A
