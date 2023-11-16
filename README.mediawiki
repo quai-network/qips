@@ -41,6 +41,13 @@ Those proposing changes should consider that ultimately consent may rest with th
 | wizeguyy
 | Standard
 | Draft
+|-
+| [[qip-0005.mediawiki|4]]
+| Consensus (hard fork)
+| Interlinks
+| gameofpointers
+| Standard
+| Draft
 |}
 
 <!-- IMPORTANT!  See the instructions at the top of this page, do NOT JUST add QIPs here! -->
