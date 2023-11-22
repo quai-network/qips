@@ -12,5 +12,6 @@ Those proposing changes should consider that ultimately consent may rest with th
 | [2](qip-0002.mediawiki)       | Consensus (hard fork) | Sharded ledger                   | wizeguyy | Standard| Draft  |
 | [3](qip-0003.mediawiki)       | Applications          | Shard Specific Address Discovery | wizeguyy | Standard| Draft  |
 | [4](qip-0004.mediawiki)       | Applications          | 9 Shard Address Mapping          | wizeguyy | Standard| Draft  |
+| [7](qip-0007.mediawiki)       | Consensus (hard fork) | Ristretto Curve25519             | alanorwick | Standard| Draft  |
 
 <!-- IMPORTANT!  See the instructions at the top of this page, do NOT JUST add QIPs here! -->
