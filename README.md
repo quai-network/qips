@@ -6,11 +6,12 @@ Having a QIP here does not make it a formally accepted standard until its status
 
 Those proposing changes should consider that ultimately consent may rest with the consensus of the Quai users.
 
-| Number | Layer                | Title                           | Owner    | Type    | Status |
-|--------|----------------------|---------------------------------|----------|---------|--------|
-| [1](qip-0001.md)       |                      | QIP process                      | wizeguyy | Process | Active |
-| [2](qip-0002.md)       | Consensus (hard fork) | Sharded ledger                   | wizeguyy | Standard| Draft  |
-| [3](qip-0003.md)       | Applications          | Shard Specific Address Discovery | wizeguyy | Standard| Draft  |
-| [4](qip-0004.md)       | Applications          | 9 Shard Address Mapping          | wizeguyy | Standard| Draft  |
+| Number           | Layer                 | Title                            | Owner    | Type     | Status |
+|------------------|-----------------------|----------------------------------|----------|----------|--------|
+| [1](qip-0001.md) |                       | QIP process                      | wizeguyy | Process  | Active |
+| [2](qip-0002.md) | Consensus (hard fork) | Sharded ledger                   | wizeguyy | Standard | Draft  |
+| [3](qip-0003.md) | Applications          | Shard Specific Address Discovery | wizeguyy | Standard | Draft  |
+| [4](qip-0004.md) | Applications          | 9 Shard Address Mapping          | wizeguyy | Standard | Draft  |
+| [5](qip-0005.md) | Consensus (hard fork) | Cross Shard Transactions         | wizeguyy | Standard | Draft  |
 
 <!-- IMPORTANT!  See the instructions at the top of this page, do NOT JUST add QIPs here! -->
