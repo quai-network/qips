@@ -13,5 +13,6 @@ Those proposing changes should consider that ultimately consent may rest with th
 | [3](qip-0003.md) | Applications          | Shard Specific Address Discovery | wizeguyy | Standard | Draft  |
 | [4](qip-0004.md) | Applications          | 9 Shard Address Mapping          | wizeguyy | Standard | Draft  |
 | [5](qip-0005.md) | Consensus (hard fork) | Cross Shard Transactions         | wizeguyy | Standard | Draft  |
+| [7](qip-0007.md) | Consensus (hard fork) | Qi UTXO Ledger                   | wizeguyy | Standard | Draft  |
 
 <!-- IMPORTANT!  See the instructions at the top of this page, do NOT JUST add QIPs here! -->
