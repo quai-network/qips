@@ -18,5 +18,6 @@ Those proposing changes should consider that ultimately consent may rest with th
 | [8](qip-0008.md)  | Consensus (hard fork) | Dynamic Tree Expansion           | wizeguyy       | Standard | Draft  |
 | [9](qip-0009.md)  | Consensus (hard fork) | Interlinks                       | gameofpointers | standard | Draft  |
 | [10](qip-0010.md) | Consensus (hard fork) | Network Object Identifiers       | wizeguyy       | standard | Draft  |
+| [13](qip-0013.md) | Applications          | Reusable Payment Codes           | wizeguyy       | standard | Draft  |
 
 <!-- IMPORTANT!  See the instructions at the top of this page, do NOT JUST add QIPs here! -->
